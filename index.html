@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Science Survival Escape Room</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">🔬 <span>ISLA VERDE</span> SCIENCE SURVIVAL</div>
+  <div class="top-actions">
+    <button id="guideBtn">📖 GUIDE</button>
+    <span id="roomCounter">ROOM 1 / 7</span>
+  </div>
+</header>
+
+<main>
+<section id="startScreen" class="screen active">
+  <div class="start-scene">
+    <div class="scene-decor">🌴 🌿 🧭 🌧️ 🌊</div>
+    <div class="eyebrow">INTERACTIVE SCIENCE ESCAPE ROOM</div>
+    <h1>ISLA VERDE<br><span>SCIENCE SURVIVAL</span></h1>
+    <p class="lead">Think like a scientist. Solve each room. Find the code. Escape the expedition.</p>
+    <div class="mission-box">
+      <b>YOUR MISSION</b>
+      <p>You are a team of field scientists on Isla Verde. A tropical storm is approaching, communication has failed,
+      and conditions are becoming dangerous. Each room contains a scientific decision or reflection from the expedition.</p>
+      <p><b>Every room has a lock.</b> Solve the challenge to receive the code that opens the next room.</p>
+    </div>
+    <button id="startBtn" class="start">ENTER THE EXPEDITION →</button>
+  </div>
+</section>
+
+<section id="gameScreen" class="screen">
+  <div class="progress">
+    <div class="progress-text"><b id="roomName">Room 1</b><span id="roomCounter2">1 / 7</span></div>
+    <div class="progress-bar"><i id="progressBar"></i></div>
+  </div>
+  <div id="room" class="room"></div>
+</section>
+
+<section id="finishScreen" class="screen">
+  <div class="finish-scene">
+    <div class="scene-decor">🎉 🔬 🌎 🎉</div>
+    <div class="eyebrow">FINAL ROOM</div>
+    <h1>RESEARCH STATION<br><span>REACHED!</span></h1>
+    <p class="lead">Your team survived the expedition by observing, reasoning, adapting, and using evidence.</p>
+    <div class="final-code"><small>FINAL EXPEDITION CODE</small><strong id="finalCode">—</strong></div>
+    <p id="timeResult"></p>
+    <button id="againBtn" class="start">START ANOTHER EXPEDITION</button>
+  </div>
+</section>
+</main>
+
+<div id="guideModal" class="modal hidden">
+  <div class="modal-card">
+    <button id="closeGuide" class="close">×</button>
+    <h2>📖 Mission Guide</h2>
+    <p><b>How to play:</b> Each room has one challenge. Solve it, submit your answer, and receive the code for the next room.</p>
+    <p><b>Decision process:</b> Read → Choose → Defend → Adapt → Analyze → Compare → Reflect.</p>
+    <p><b>Team language:</b> “We chose this because…” • “Our evidence suggests…” • “This decision matters because…”</p>
+    <p><b>Teacher tip:</b> Students can work in teams and enter the code together. The codes can also be printed and placed around the classroom as physical locks.</p>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
